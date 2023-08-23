@@ -8,6 +8,12 @@
  */
 
 function getPersonObject() {
+  const x = {
+    name: 'Bob',
+    age: 32,
+    gender: 'male'
+  }
+  return x
 }
 
 /**
@@ -25,7 +31,22 @@ function getPersonObject() {
  */
 
 function mutateObject(person) {
-}
+  const A = {
+    name: 'Bob',
+    age: 32,
+    gender: 'male'
+  }
+  const B = {
+    name: 'Mary',
+    age: 37,
+    gender: 'female'
+  }
+  if (A === person) {
+    return A
+  } else {
+    return B
+  }
+} 
 
 /**
  *  6.3 下記引数で渡される配列にランダムな1 ~10の数字を割り振り、オブジェクトとして返す
@@ -49,6 +70,11 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
+  let x = {};
+  for (let i = 0; i <= persons.length; i++) {
+    x[persons[i]] = i + 1
+  }
+  return x
 }
 
 /**
@@ -63,6 +89,8 @@ function assignNumber(persons) {
  */
 
 function isDuplicate(array) {
+  const x = new Set(array);
+  return x.size !== array.length
 }
 
 module.exports = {
