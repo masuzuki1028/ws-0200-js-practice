@@ -37,8 +37,8 @@ function displayArgument(arg) {
  *
  */
 function sumTwoArgs(a, b) {
-  let x = a + b;
-  return x;
+  // let x = a + b;
+  return a + b;
 }
 
 /**
@@ -46,8 +46,8 @@ function sumTwoArgs(a, b) {
  *
  */
 function subtractTwoArgs(a, b) {
-  let x = a - b;
-  return x;
+  // let x = a - b;
+  return a - b;
 }
 
 /**
@@ -55,7 +55,8 @@ function subtractTwoArgs(a, b) {
  *
  */
 function quotientTwoArgs(a, b) {
-  if (a == 0 || b == 0) {
+  // if (a == 0 || b == 0) {
+    if (b === 0) {
     return null
   } else {
     let x = a / b;
@@ -68,8 +69,8 @@ function quotientTwoArgs(a, b) {
  *
  */
 function productTwoArgs(a, b) {
-  let x = a * b;
-  return x;
+  // let x = a * b;
+  return a * b;
 }
 
 /**
@@ -77,8 +78,8 @@ function productTwoArgs(a, b) {
  *
  */
 function remainderTwoArgs(a) {
-  let x = a % 2;
-  return x;
+  // let x = a % 2;
+  return  a % 2;
 }
 
 /**
@@ -86,12 +87,13 @@ function remainderTwoArgs(a) {
  *
  */
 function isEven(a) {
-  if (a != 0) {
-    let x = a % 2
-    return x == "0";
-  } else {
-    return true;
-  }
+  return (a % 2) === 0;
+  // if (a != 0) {
+  //   let x = a % 2
+  //   return x == "0";
+  // } else {
+  //   return true;
+  // }
 }
 
 /**
@@ -99,8 +101,8 @@ function isEven(a) {
  *
  */
 function concatString(a, b) {
-  let x = a + b
-  return x;
+  // let x = a + b
+  return a + b;
 }
 
 module.exports = {

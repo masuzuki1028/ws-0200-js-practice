@@ -13,7 +13,7 @@ function length(str) {
  */
 
 function lengthIsEven(str) {
-  return str.length % 2 == 0;
+  return str.length % 2 === 0;
 }
 
 /**

@@ -4,12 +4,11 @@
  */
 
 function printArray(array) {
-  if (array.length > 0) {
-    for (let i = 0; i < array.length; i++) {
-      console.log(array[i]);
-    }
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
   }
 }
+
 /**
  *  5.2 関数内で全ての曜日を配列として宣言して返却するメソッドを実装してください
  *
@@ -59,8 +58,14 @@ function findNum(array, num) {
  */
 
 function isDuplicate(array) {
-  const x = new Set(array);
-  return x.size !== array.length
+  for  (let i = 0; i < array.length; i++)  {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] === array [j]) {
+        return true
+      }
+    }
+  }
+  return false
 }
 
 module.exports = {
