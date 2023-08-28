@@ -20,8 +20,40 @@
  *      name: ichiro, age: 54, bio: I like to play baseball
  *
  */
+// クラスメソッド→インスタンスを指定せずクラスからメソッドの直接呼び出し
 
 class Person {
+  name  = '';
+  age  = 0;
+  bio  = '';
+
+  sayHi() {
+    console.log("Hi!!");
+  }
+  static describe() {
+    console.log("This is a Person class");
+  }
+
+  constructor(name = "", age = 0, bio = "") {
+    this.name = name;
+    this.age = age;
+    this.bio = bio;
+  }
+
+  // constructor(name, age, bio) {
+  //   this.name = name;
+  //   this.age = age;
+  //   this.bio = bio;
+  // }
+
+  get isUnderage() {
+    return this.age < 20
+  }
+
+  toString() {
+    return ("name: "+ this.name +", age: "+ this.age +", bio: "+this.bio)
+  }
+
 }
 
 function main () {
