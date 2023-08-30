@@ -27,6 +27,7 @@ class List {
    */
   get size() {
     // TODO:
+    return this.data.length
   }
 
   /** 引数で渡された添字のデータを取得する
@@ -36,6 +37,7 @@ class List {
    */
   index(index) {
     // TODO:
+    return this.data[index]
   }
 
   /** リストの 要素を追加する
@@ -45,6 +47,9 @@ class List {
    */
   push(item) {
     // TODO:
+    this.data[item-1] = item;
+    return this.data[item]
+
   }
 
   /** 与えられた引数により、リストの 要素を削除する
@@ -54,6 +59,7 @@ class List {
    */
   remove(targetIndex) {
     // TODO:
+    return this.data[--targetIndex]
   }
 
   /** リストの 末尾の要素を取得する
