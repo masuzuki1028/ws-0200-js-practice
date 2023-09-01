@@ -123,6 +123,12 @@ class List {
    */
   filter(target) {
     // TODO:
+    let temp = [];
+    for (let i = 0; i <= this.data.length -1; i++) {
+        if (this.data[i] !== target)
+          temp.push(this.data[i])
+    }
+    return new List(temp)
   }
 }
 
@@ -153,6 +159,7 @@ class Stack {
    */
   push(item) {
     // TODO:
+    this.data.push(item)
   }
 
   /** スタックから要素を取得する
@@ -162,6 +169,7 @@ class Stack {
    */
   pop() {
     // TODO:
+    return this.data.pop()
   }
 
   /** スタックの末尾の要素を参照する
@@ -171,6 +179,7 @@ class Stack {
    */
   peek() {
     // TODO:
+    return this.data[this.data.length - 1]
   }
 }
 
@@ -202,6 +211,7 @@ class Queue {
    */
   enqueue(item) {
     // TODO:
+    this.data.push(item)
   }
 
   /** キューから要素を取得する
@@ -210,6 +220,7 @@ class Queue {
    */
   dequeue() {
     // TODO:
+    return this.data.shift()
   }
 
   /** キューの要素を参照する
@@ -218,6 +229,7 @@ class Queue {
    */
   peek() {
     // TODO:
+    return this.data[0]
   }
 }
 

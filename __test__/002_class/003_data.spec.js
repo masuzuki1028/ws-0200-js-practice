@@ -126,7 +126,6 @@ describe('List', () => {
     expect(list.index(1)).toEqual(3)
     expect(list.index(2)).toEqual(4)
 
-
     obj = new List([])
     list = obj.filter(0)
     expect(list.size).toEqual(0)
