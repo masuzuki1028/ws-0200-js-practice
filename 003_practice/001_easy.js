@@ -12,6 +12,11 @@
  */
 
 function length(str) {
+  let x = 0;
+  for (i in str) {
+    x = x + 1
+  }
+  return x
 }
 
 /**
@@ -26,6 +31,11 @@ function length(str) {
  *
  */
 function reverse(str) {
+  let x = "";
+  for (let i = str.length - 1; i >= 0; i-- ) {
+    x += str[i]
+  }
+  return x
 }
 
 /**
@@ -41,7 +51,14 @@ function reverse(str) {
  */
 
 function findIndex(str, char) {
+    // TODO:
+    for (let i = 0; i <= str.length; i++) {
+      if (str[i] === char)
+        return i
+    }
+      return -1
 }
+
 
 /**
  *  指定された文字列を指定された文字で分割
@@ -56,6 +73,7 @@ function findIndex(str, char) {
  */
 
 function split(a, b) {
+  return a.split(b)
 }
 
 /**
@@ -71,6 +89,11 @@ function split(a, b) {
  */
 
 function sum(array) {
+  let x = 0;
+  for (let i = 0; i < array.length; i++) {
+    x = x + array[i]
+  }
+  return x
 }
 
 /**
@@ -88,6 +111,14 @@ function sum(array) {
  */
 
 function average(array) {
+  let x = 0;
+  if (array.length !== 0) {
+    for (let i = 0; i < array.length; i++) {
+      x = x + array[i]
+    }
+    return Math.floor(x / array.length)
+  }
+  return 0
 }
 
 /**
@@ -103,6 +134,7 @@ function average(array) {
  */
 
 function concat(a, b) {
+  return a.concat(b)
 }
 
 /**
@@ -118,6 +150,7 @@ function concat(a, b) {
  */
 
 function size(array) {
+  return array.length
 }
 
 /**
@@ -134,6 +167,9 @@ function size(array) {
  */
 
 function minMax(array) {
+  if (array.length !== 0 ) {
+    console.log("max: " + Math.max(...array) + ", min: "+ Math.min(...array))
+  }
 }
 
 /**
@@ -148,7 +184,13 @@ function minMax(array) {
  */
 
 function seq(num) {
+  let x = [];
+    for (let i = 0; i < num; i++) {
+      x.push(i)
+    }
+  return x
 }
+
 
 /**
  *  奇数の連番
@@ -163,6 +205,13 @@ function seq(num) {
  */
 
 function omitSeq(num) {
+  let x = [];
+  for (let i = 1; i <= num; i++) {
+    if ( i % 2 == 1 ) {
+      x.push(i)
+    }
+  }
+  return x
 }
 
 /**
@@ -178,7 +227,15 @@ function omitSeq(num) {
  */
 
 function filter(array, num) {
+  let x = [];
+  for (let i = 0; i <= array.length; i++) {
+    if ( array[i] <= num) {
+      x.push(array[i])
+    }
+  }
+  return x
 }
+
 
 
 
