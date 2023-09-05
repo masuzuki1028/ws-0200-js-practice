@@ -10,6 +10,15 @@
  *
  */
 function rotate(str, num) {
+  let x = "";
+  // if ( 0 < num) {
+    x = str.slice(-num)
+    x += str.slice(0,-num)
+  // } else {
+  //   x = str.slice(-num)
+  //   x += str.slice(0,-num)
+  // }
+  return x
 }
 
 /**
