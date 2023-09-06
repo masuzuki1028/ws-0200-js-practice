@@ -14,10 +14,6 @@ function rotate(str, num) {
   // if ( 0 < num) {
     x = str.slice(-num)
     x += str.slice(0,-num)
-  // } else {
-  //   x = str.slice(-num)
-  //   x += str.slice(0,-num)
-  // }
   return x
 }
 
@@ -33,6 +29,7 @@ function rotate(str, num) {
  *
  */
 function removeVowels(str) {
+  return str.replace(/[aeiou]/g, '')
 }
 
 /**
@@ -47,6 +44,16 @@ function removeVowels(str) {
  *
  */
 function countStr(s1, s2) {
+  let x = 0;
+  let z = 0;
+  for (let i = 0; i < s1.length; i += s2.length ) {
+      z = s1.indexOf(s2)
+      if (z !== -1) {
+          s1 = s1.slice(s2.length)
+          x = x + 1            
+      }
+  }
+  return x
 }
 
 /**
@@ -62,6 +69,11 @@ function countStr(s1, s2) {
  */
 
 function isPalindrome(str) {
+  let x =  "";
+  for (let i = str.length - 1; 0 <= i; i--) {
+    x = x + str[i]
+  }
+  return  str === x
 }
 
 /**
@@ -79,6 +91,18 @@ function isPalindrome(str) {
  *
  */
 function isPrime(num) {
+  if (num === 1) {
+    return false
+  } else if (num === 2) {
+    return true
+  }
+
+  for (let i = 2; i*i <= num; i++) {
+    if ( num % i === 0) {
+      return false
+    }
+  }
+  return true
 }
 
 /**
@@ -97,6 +121,13 @@ function isPrime(num) {
  *
  */
 function sumWithout4andNext(array) {
+  let x = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (4 !== array[i] && 4 !== array[i - 1]) { 
+      x = x + array[i]
+    }
+  }
+  return x
 }
 
 module.exports = {
