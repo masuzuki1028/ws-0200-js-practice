@@ -110,6 +110,7 @@ function sum(array) {
  *
  */
 
+// 配列 0を先にreturn 0をする
 function average(array) {
   let x = 0;
   if (array.length !== 0) {
@@ -133,6 +134,7 @@ function average(array) {
  *
  */
 
+// スプレッド構文 ...
 function concat(a, b) {
   return a.concat(b)
 }

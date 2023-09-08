@@ -47,8 +47,8 @@ class List {
    */
   push(item) {
     // TODO:
-    this.data[item-1] = item;
-    return this.data[item]
+    this.data.push(item);
+    return item
 
   }
 
@@ -159,7 +159,7 @@ class Stack {
    */
   push(item) {
     // TODO:
-    this.data.push(item)
+    this.data.push(item) 
   }
 
   /** スタックから要素を取得する
