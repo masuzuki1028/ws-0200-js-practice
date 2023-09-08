@@ -11,7 +11,13 @@
  */
 
 function sumSequence (n, sum = 0) {
+  if (n === 0) {
+    return 0;
+  }
+
+  return n + sumSequence(n-1)
 }
+
 
 /**
  *  フィボナッチ数
@@ -24,6 +30,13 @@ function sumSequence (n, sum = 0) {
  */
 
 function fibonacci (num) {
+  const x = [1,1];
+  for (i = 2; i < num; i++) {
+    const a = x[i -1];
+    const b = x[i -2];
+    x.push(a + b)
+  }
+  return x
 }
 
 
@@ -80,8 +93,34 @@ function fibonacci (num) {
  */
 
 function fileSize (node, sum = 0) {
-}
+  let result = 0;
+  result += node.size
 
+  // for ... ofを利用
+  // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/for...of
+  if (node.children && 0 < node.children.length) {
+    for (const x of node.children) {
+      result += fileSize(x)
+    }
+  }
+  return result
+  // if (node.children && 0 < node.children.length) {
+  //   for (let i = 0; i < node.children.length; i++ ) {
+  //     if (node.children[i].children && 0 < node.children[i].children.length) {
+  //       for (let x = 0; x < node.children[i].children.length; x++ ) {
+  //         if (node.children[i].children[x].children && 0 < node.children[i].children[x].children.length) {
+  //           for (let y = 0; y < node.children[i].children[x].children.length; y++ ) {
+  //             result += node.children[i].children[x].children[y].size
+  //           }
+  //         }
+  //         result += node.children[i].children[x].size
+  //       }
+  //     }
+  //     result += node.children[i].size
+  //   }
+  // }
+  // return result
+}
 
 module.exports = {
   sumSequence,

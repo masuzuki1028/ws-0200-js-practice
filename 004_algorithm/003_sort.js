@@ -9,6 +9,7 @@
  */
 
 function bubbleSort (array) {
+  array += array
   return array
 }
 
