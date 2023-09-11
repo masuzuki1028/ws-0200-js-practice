@@ -33,6 +33,7 @@ function bubbleSort (array) {
 
 function insertSort (array) {
   for (let i = 1; i < array.length; i++){
+    //  [5, 3, 2, 1]のケースで考える
     //要素iをtempに格納　　 1要素目(3)を格納
     const temp = array[i]
     let j = i -1
